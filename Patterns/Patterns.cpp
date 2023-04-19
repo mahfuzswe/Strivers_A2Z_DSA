@@ -11,7 +11,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print1(int n)
+void pattern1(int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -246,7 +246,7 @@ int main()
     int n;
     cin >> n;
 
-    // print1(n);
+    // pattern1(n);
     // pattern2(n);
     // pattern3(n);
     // pattern4(n);

@@ -4,9 +4,9 @@ using namespace std;
 /*
     # C++ STL divided into 4 types:
     1. Algorithms
-    2. Containers
+    2. Containers ***
     3. Functions
-    4. Iterators
+    4. Iterators ***
 */
 
 // ** Pairs **
@@ -106,9 +106,9 @@ void explainVectors()
     //{10,20}
     v.pop_back(); //{10}
 
-    // v1 --> {10,20}
-    // v2 --> {30,40}
-    v1.swap(v2); // v1 --> {30,40}, v2 --> {10,20}
+    // v1 --> {10,20};
+    // v2 --> {30,40};
+    // v1.swap(v2); // v1 --> {30,40}, v2 --> {10,20}
 
     v.clear(); // erases the entire vector
 
@@ -299,6 +299,74 @@ void explainMultiSet()
     ms.insert(1); // {1, 1, 1}
 
     ms.erase(1); // all 1's erased
+
+    int cnt = ms.count(1); // -> counts number of 1 in the multiset
+
+    // only a single one erased
+    ms.erase(ms.find(1));
+
+    ms.erase(ms.find(1), ms.find(2)); // erase(start address, end address) // errase both of them
+
+    // rest of all functions same as set
+}
+
+void explainUSet()
+{                          // unordered set
+    unordered_set<int> st; // everything is similar to set
+
+    // lower_bound and upper_bound function
+    // does not works, rest all functions are same
+    // as above, it does not stores in any
+    // particular order it has a better complexity  // O(1) ; blue moon happens in worst case O(N)
+    // than set in most cases, except some when collision happens
+}
+
+void explainMap()
+{
+    // * map stores unique keys in sorted order
+
+    map<int, int> mpp; // {key,value}
+
+    map<int, pair<int, int>> mpp; // here key is integer, value is 2 integer
+
+    map<pair<int, int>, int> mpp; // here key is 2 integer, value is 1 integer
+
+    mpp[1] = 2;
+    mpp.emplace(3, 1);
+    mpp.insert({2, 4});
+
+    // mpp[{2, 3}] = 10;
+
+    for (auto it : mpp)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    cout << mpp[1];
+    cout << mpp[5];
+
+    auto it = mpp.find(3);
+    // cout << *(it).second;
+
+    auto it = mpp.find(5); // if 5 not there it point to nothing but mpp.end();
+                           // .end() means after the mpp
+
+    auto it = mpp.lower_bound(2);
+    auto it = mpp.upper_bound(3);
+
+    // erase(), swap(), size(), empty(), are same as above
+}
+
+void explainMultimap()
+{
+    // everything is same as map, only it can store multiple keys
+    // only mpp[key] can not be used here
+}
+
+void explainUnorderedMap()
+{
+    // unique keys but not stored
+    // same as set and unordered_Set differnce.
 }
 
 int main()

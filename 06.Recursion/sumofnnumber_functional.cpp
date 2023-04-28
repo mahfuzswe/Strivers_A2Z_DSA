@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int summetion(int n)
+int summation(int n)
 {
     if (n == 0)
     {
@@ -13,7 +13,7 @@ int summetion(int n)
     }
     else
     {
-        return n + summetion(n - 1);
+        return n + summation(n - 1);
     }
 }
 
@@ -21,7 +21,7 @@ int main()
 {
     int n;
     cin >> n;
-    cout << summetion(n) << endl;
+    cout << summation(n) << endl;
 
     return 0;
 }

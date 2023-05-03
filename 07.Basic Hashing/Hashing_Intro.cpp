@@ -1,4 +1,0 @@
-/*
- ** Hashing Basics **
-
- */

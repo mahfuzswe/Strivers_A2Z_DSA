@@ -37,3 +37,14 @@ int main()
 
     return 0;
 }
+
+/*
+if the array has max element till 10^9 , can we declear an array of size of 10^9 + 1?
+ the answer is NO .
+ the maximum of that you can declear is 10^6 if it is of integer  --> inside main
+ but if we declear somewhere globally an array can go till 10^7  --> globally
+
+ for boolean array till 10^7 --> inside main
+                   till 10^8 --> globally
+
+*/

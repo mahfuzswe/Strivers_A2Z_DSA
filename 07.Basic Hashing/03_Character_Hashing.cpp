@@ -1,4 +1,4 @@
-// Q: how many times a character in an array
+// Q: how many times a character in an array appear?
 
 // hashing method
 

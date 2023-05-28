@@ -23,19 +23,18 @@ int f(int n, int arr[])
         }
     }
     return cnt;
-}
 
-int main()
-{
-    int n;
-    cin >> n;
-    int arr[5];
-    for (int i = 0; i < 5; i++)
+    int main()
     {
-        cin >> arr[i];
+        int n;
+        cin >> n;
+        int arr[5];
+        for (int i = 0; i < 5; i++)
+        {
+            cin >> arr[i];
+        }
+
+        cout << f(n, arr) << endl;
+
+        return 0;
     }
-
-    cout << f(n, arr) << endl;
-
-    return 0;
-}

@@ -38,8 +38,8 @@ int main(){
     }
     */
     // simple mathematical thinking
-    for(int i=n-d; i<n; i++){
-        arr[i] = temp[i-(n-d)];
+    for(int i=n-d; i<n; i++){ // base index: n-d
+        arr[i] = temp[i-(n-d)]; // just substract the base index from current index (i)
     }
 
 
@@ -51,3 +51,6 @@ int main(){
 
     return 0;
 }
+
+// Time Complexity: O(d) + O(n-d) + O(d) = O(n+d)
+// Extra space used : O(d) ; as we using a temp array to stroing the extra emelents.

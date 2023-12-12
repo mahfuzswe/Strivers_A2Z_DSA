@@ -1,0 +1,10 @@
+Time Complexity:
+----------------
+O(log_2 n)
+long base 2 n
+
+Over folw case:
+--------------------
+mid = low + (high-low) / 2
+
+in this caes integer will work, no need to take long long
